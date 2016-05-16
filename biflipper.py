@@ -1,7 +1,6 @@
 from pyZZUF import *
 import os.path
 import threading
-import yo
 
 
 def test_flipping():

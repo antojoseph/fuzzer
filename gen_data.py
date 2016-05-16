@@ -1,3 +1,4 @@
+import biflipper
 def fuzzer_options():
     print "1 )Bit flipper"
     print "2 )Radamsa"

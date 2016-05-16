@@ -1,0 +1,3 @@
+pip install pyZZUF
+mkdir generated_samples_folder
+mkdir mutation_sample
