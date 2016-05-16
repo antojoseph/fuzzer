@@ -1,4 +1,5 @@
 import biflipper
+import radamsa_magic
 def fuzzer_options():
     print "1 )Bit flipper"
     print "2 )Radamsa"
@@ -8,3 +9,5 @@ def fuzzer_options():
     choice = raw_input("Enter your choice : ")
     if int(choice) == 1:
         biflipper.flipp()
+    elif int(choice) == 2:
+    	radamsa_magic.start()
