@@ -30,7 +30,7 @@ class AsynchronousFileReader(threading.Thread):
         return not self.is_alive() and self._queue.empty()
 
 def substring_matches_line(line):
-    target_substring = "SYSTEM_TOMBSTONE"
+    target_substring = "SIGSEGV"
     return target_substring in line
 
 # You'll need to add any command line arguments here.

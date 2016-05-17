@@ -36,7 +36,7 @@ def thread_it(fuzz_range_start, fuzz_range_end, number_of_samples, data_to_be_fl
 def flipp():
     # sample_path = raw_input("Provide path to a sample file :")
     # only for testing, uncomment in prod
-    sample_path = "mutation_sample/img.jpg"
+    sample_path = "mutation_sample/sample.dex"
     num_sample = raw_input("Provide the number of Samples to be Generated : ")
     # make threading dynamic , for now sticking to 4 threads
     # number_of_threads = raw_input("Number of Threads to be used :")

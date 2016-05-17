@@ -1,7 +1,7 @@
 import os
 import banner
 import gen_data
-
+import run_campaign
 
 def welcome_banner():
     banner.horizontal("DroiD-FF")
@@ -27,6 +27,8 @@ def show_options():
             print "Your Option is : " + options[int(user_selection)]
             if int(user_selection) == 0:
                 gen_data.fuzzer_options()
+            elif int(user_selection) ==1 :
+                run_campaign.start()
     except ValueError:
         error()
 
