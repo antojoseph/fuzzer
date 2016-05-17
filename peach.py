@@ -9,5 +9,3 @@ def start():
     # number_of_threads = raw_input("Number of Threads to be used :")
     # ./peach - -range 0, 100 pits/wav.xml
     result = os.system("third_party/peach3/peach --range 0,"+num_sample+" "+pit_path)
-
-start()
