@@ -1,10 +1,4 @@
 import os 
-def open_file_and_return_bite_array(path):
-    with open(path, "rb") as sampleFile:
-        f = sampleFile.read()
-        b = bytearray(f)
-
-    return b
 
 def radamsa_do(sample_path,extension,num_sample):
 
