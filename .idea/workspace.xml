@@ -2,6 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb1c684-a2ac-4c69-b00a-033eb2956ae0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_1.wav.Control" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_10.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_11.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_12.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_13.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_14.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_16.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_19.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_20.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_4.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_6.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_7.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_8.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generated_samples_folder/fuzzed_9.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen_data.py" afterPath="$PROJECT_DIR$/gen_data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peach.py" afterPath="$PROJECT_DIR$/peach.py" />
     </list>
