@@ -12,7 +12,14 @@ path_to_dex_fixer = "/Users/anto/myfuzzer/fuzzer/bin/dexRepair"
 path_to_mutated_dex = "/Users/anto/myfuzzer/fuzzer/generated_samples_folder/"
 
 def start():
+    clear_logcat()
     fix_my_dex()
+
+def clear_logcat():
+    adb_android.shell("logcat -c")
+
+def save_logs():
+    adb_android.shell("logcat -d > /data/local/tmp/logcat.txt")
 
 def fix_my_dex():
     onlyfiles = [f for f in listdir(path_to_mutated_dex) if isfile(join(path_to_mutated_dex, f))]
@@ -34,7 +41,7 @@ def run_on_android_emulator():
         adb_android.shell('log -p F -t CRASH_LOGGER SIGSEGV : '+onlyfiles[x])
         adb_android.shell('dexdump /data/local/tmp/'+onlyfiles[x])
         adb_android.shell("rm /data/local/tmp/"+onlyfiles[x])
-
+    save_logs()
 #def re_mount():
 #	remount_cmd="adb shell mount -o remount,rw /system"
 #	os.system(remount_cmd)
