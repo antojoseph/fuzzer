@@ -3,13 +3,10 @@ from os import listdir
 from os.path import isfile, join
 import subprocess as sub
 from adb_android import adb_android
+import fuzzerConfig
 
-
-
-#change this
-path_to_dex_fixer = "/Users/anto/myfuzzer/fuzzer/bin/dexRepair"
 # change this
-path_to_mutated_dex = "/Users/anto/myfuzzer/fuzzer/generated_samples_folder/"
+
 
 def start():
     clear_logcat()
@@ -22,26 +19,28 @@ def save_logs():
     adb_android.shell("logcat -d > /data/local/tmp/logcat.txt")
 
 def fix_my_dex():
-    onlyfiles = [f for f in listdir(path_to_mutated_dex) if isfile(join(path_to_mutated_dex, f))]
+    onlyfiles = [f for f in listdir(fuzzerConfig.path_to_mutated_dex) if isfile(join(fuzzerConfig.path_to_mutated_dex, f))]
     for x in range(len(onlyfiles)):
         #os.system(path_to_dex_fixer+" -I "+onlyfiles[x])
-        p = sub.Popen([path_to_dex_fixer, '-I', path_to_mutated_dex+onlyfiles[x]], stdout=sub.PIPE, stderr=sub.PIPE)
+        p = sub.Popen([fuzzerConfig.path_to_dex_fixer, '-I', fuzzerConfig.path_to_mutated_dex+onlyfiles[x]], stdout=sub.PIPE, stderr=sub.PIPE)
         output, errors = p.communicate()
         print output
         run_on_android_emulator()
 
 def run_on_android_emulator():
-    onlyfiles = [f for f in listdir(path_to_mutated_dex) if isfile(join(path_to_mutated_dex, f))]
+    onlyfiles = [f for f in listdir(fuzzerConfig.path_to_mutated_dex) if isfile(join(fuzzerConfig.path_to_mutated_dex, f))]
     for x in range(len(onlyfiles)):
-        print path_to_mutated_dex+onlyfiles[x]
+        print fuzzerConfig.path_to_mutated_dex+onlyfiles[x]
 
         #adb logcat -c to clear logs from logcat
 
-        adb_android.push(path_to_mutated_dex+onlyfiles[x], '/data/local/tmp/')
+        adb_android.push(fuzzerConfig.path_to_mutated_dex+onlyfiles[x], '/data/local/tmp/')
         adb_android.shell('log -p F -t CRASH_LOGGER SIGSEGV : '+onlyfiles[x])
-        adb_android.shell('dexdump /data/local/tmp/'+onlyfiles[x])
+        adb_android.shell(fuzzerConfig.target_android_executable+' /data/local/tmp/'+onlyfiles[x])
         adb_android.shell("rm /data/local/tmp/"+onlyfiles[x])
     save_logs()
+
+
 #def re_mount():
 #	remount_cmd="adb shell mount -o remount,rw /system"
 #	os.system(remount_cmd)

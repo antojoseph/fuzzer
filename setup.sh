@@ -1,5 +1,9 @@
+#!/usr/bin/env bash
 pip install pyZZUF
 pip install adb_android
-mkdir generated_samples_folder
-mkdir mutation_sample
-mkdir crashes
+
+#folders for the fuzzer
+mkdir $HOME+"/myfuzzer/fuzzer/confirmed_crashes/"
+mkdir $HOME+"/myfuzzer/fuzzer/crashes/"
+mkdir $HOME+"/myfuzzer/fuzzer/generated_samples_folder/"
+mkdir $HOME+"/myfuzzer/fuzzer/generated_samples_folder/"
